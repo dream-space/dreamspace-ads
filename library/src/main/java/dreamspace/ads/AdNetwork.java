@@ -3,6 +3,7 @@ package dreamspace.ads;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -100,7 +101,7 @@ public class AdNetwork {
                     public void onAdFailedToLoad(@NonNull LoadAdError adError) {
                         ad_container.setVisibility(View.GONE);
                         Log.d(TAG, "ADMOB banner onAdFailedToLoad");
-                        loadBannerAdMain(true, finalIndex, finalRetry, ad_container);
+                        delayAndLoadBanner(true, finalIndex, finalRetry, ad_container);
                     }
                 });
             } else if (AdConfig.ad_networks[finalIndex] == AdNetworkType.UNITY) {
@@ -121,7 +122,7 @@ public class AdNetwork {
                     public void onBannerFailedToLoad(BannerView bannerView, BannerErrorInfo bannerErrorInfo) {
                         ad_container.setVisibility(View.GONE);
                         Log.d(TAG, "UNITY banner onBannerFailedToLoad");
-                        loadBannerAdMain(true, finalIndex, finalRetry, ad_container);
+                        delayAndLoadBanner(true, finalIndex, finalRetry, ad_container);
                     }
 
                     @Override
@@ -149,7 +150,7 @@ public class AdNetwork {
                     public void onBannerAdLoadFailed(IronSourceError ironSourceError) {
                         ad_container.setVisibility(View.GONE);
                         Log.d(TAG, "IRONSOURCE banner onBannerAdLoadFailed");
-                        loadBannerAdMain(true, finalIndex, finalRetry, ad_container);
+                        delayAndLoadBanner(true, finalIndex, finalRetry, ad_container);
                     }
 
                     @Override
@@ -176,6 +177,12 @@ public class AdNetwork {
 
             }
         });
+    }
+
+    private void delayAndLoadBanner(boolean enable, int ad_index, int retry_count, LinearLayout ad_container){
+        new Handler(activity.getMainLooper()).postDelayed(() -> {
+            loadBannerAdMain(enable, ad_index, retry_count, ad_container);
+        }, 2000);
     }
 
     public void loadInterstitialAd(boolean enable) {
@@ -206,7 +213,7 @@ public class AdNetwork {
                     Log.i(TAG, loadAdError.getMessage());
                     adMobInterstitialAd = null;
                     Log.i(TAG, "ADMOB interstitial onAdFailedToLoad");
-                    loadInterstitialAd(true, finalIndex, finalRetry);
+                    delayAndInterstitial(true, finalIndex, finalRetry);
                 }
             });
         } else if (AdConfig.ad_networks[finalIndex] == AdNetworkType.UNITY) {
@@ -219,7 +226,7 @@ public class AdNetwork {
                 @Override
                 public void onUnityAdsFailedToLoad(String placementId, UnityAds.UnityAdsLoadError error, String message) {
                     Log.i(TAG, "UNITY interstitial onUnityAdsFailedToLoad");
-                    loadInterstitialAd(true, finalIndex, finalRetry);
+                    delayAndInterstitial(true, finalIndex, finalRetry);
                 }
             });
         } else if (AdConfig.ad_networks[finalIndex] == AdNetworkType.IRONSOURCE) {
@@ -233,7 +240,7 @@ public class AdNetwork {
                 @Override
                 public void onInterstitialAdLoadFailed(IronSourceError ironSourceError) {
                     Log.i(TAG, "IRONSOURCE interstitial onInterstitialAdLoadFailed");
-                    loadInterstitialAd(true, finalIndex, finalRetry);
+                    delayAndInterstitial(true, finalIndex, finalRetry);
                 }
 
                 @Override
@@ -262,6 +269,12 @@ public class AdNetwork {
                 }
             });
         }
+    }
+
+    private void delayAndInterstitial(boolean enable, int ad_index, int retry_count){
+        new Handler(activity.getMainLooper()).postDelayed(() -> {
+            loadInterstitialAd(enable, ad_index, retry_count);
+        }, 2000);
     }
 
     public boolean showInterstitialAd(boolean enable) {
