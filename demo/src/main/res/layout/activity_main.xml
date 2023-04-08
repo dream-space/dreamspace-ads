@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/banner_admob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/banner_fan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#E4E4E4"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/banner_unity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#E4E4E4"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/banner_iron_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#E4E4E4"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/banner_applovin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#E4E4E4"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/inters_admob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="Inters Admob"
+        android:textColor="#3C3C3C" />
+
+    <Button
+        android:id="@+id/inters_fan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="Inters FAN"
+        android:textColor="#3C3C3C" />
+
+    <Button
+        android:id="@+id/inters_unity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="Inters UNITY"
+        android:textColor="#3C3C3C" />
+
+    <Button
+        android:id="@+id/inters_ironsource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="Inters IRONSOURCE"
+        android:textColor="#3C3C3C" />
+
+    <Button
+        android:id="@+id/inters_applovin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="Inters APPLOVIN"
+        android:textColor="#3C3C3C" />
+
+</LinearLayout>
