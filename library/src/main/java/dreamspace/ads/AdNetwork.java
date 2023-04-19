@@ -78,6 +78,7 @@ public class AdNetwork {
             ad_index = ad_index + 1;
         }
         int finalRetry = retry_count;
+        if(ad_index >= AdConfig.ad_networks.length) ad_index = 0;
         int finalIndex = ad_index;
 
         ad_container.setVisibility(View.GONE);
@@ -198,6 +199,7 @@ public class AdNetwork {
             ad_index = ad_index + 1;
         }
         int finalRetry = retry_count;
+        if(ad_index >= AdConfig.ad_networks.length) ad_index = 0;
         int finalIndex = ad_index;
 
         if (AdConfig.ad_networks[finalIndex] == AdNetworkType.ADMOB) {
