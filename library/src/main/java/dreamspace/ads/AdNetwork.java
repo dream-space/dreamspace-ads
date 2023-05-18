@@ -71,7 +71,7 @@ public class AdNetwork {
 
     private void loadBannerAdMain(boolean enable, int ad_index, int retry_count, LinearLayout ad_container) {
         if (!AdConfig.ad_enable || !enable) return;
-        if (ad_index >= AdConfig.ad_networks.length) return;
+        if (ad_index >= AdConfig.ad_networks.length-1) return;
         retry_count = retry_count + 1;
         if (retry_count >= AdConfig.retry_ad_networks) {
             retry_count = 0;
@@ -192,6 +192,7 @@ public class AdNetwork {
 
     private void loadInterstitialAd(boolean enable, int ad_index, int retry_count) {
         if (!AdConfig.ad_enable || !enable) return;
+        if (ad_index >= AdConfig.ad_networks.length-1) return;
         last_interstitial_index = ad_index;
         retry_count = retry_count + 1;
         if (retry_count >= AdConfig.retry_ad_networks) {
