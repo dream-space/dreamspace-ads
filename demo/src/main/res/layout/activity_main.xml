@@ -5,7 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingVertical="20dp"
-    tools:context=".MainActivity">
+    tools:context="dreamspace.ads.sdk.demo.MainActivity">
+
+    <Button
+        android:id="@+id/next_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:text="NEXT ACT"
+        android:textColor="#3C3C3C" />
 
     <LinearLayout
         android:id="@+id/banner_admob"

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'dreamspace.ads.demo'
+    namespace 'dreamspace.ads.sdk.demo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "dreamspace.ads"
+        applicationId "dreamspace.ads.sdk"
         minSdk 19
         targetSdk 33
         versionCode 1
