@@ -1,4 +1,4 @@
-package dreamspace.ads.gdpr;
+package dreamspace.ads.sdk.gdpr;
 
 import android.app.Activity;
 import android.os.Bundle;

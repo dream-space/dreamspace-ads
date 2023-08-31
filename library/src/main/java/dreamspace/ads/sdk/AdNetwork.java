@@ -1,4 +1,4 @@
-package dreamspace.ads;
+package dreamspace.ads.sdk;
 
 import static com.facebook.ads.AdSettings.IntegrationErrorMode.INTEGRATION_ERROR_CALLBACK_MODE;
 
@@ -38,11 +38,11 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import dreamspace.ads.data.AdNetworkType;
-import dreamspace.ads.data.SharedPref;
-import dreamspace.ads.gdpr.LegacyGDPR;
-import dreamspace.ads.listener.ActivityListener;
-import dreamspace.ads.listener.AdOpenListener;
+import dreamspace.ads.sdk.data.AdNetworkType;
+import dreamspace.ads.sdk.data.SharedPref;
+import dreamspace.ads.sdk.gdpr.LegacyGDPR;
+import dreamspace.ads.sdk.listener.ActivityListener;
+import dreamspace.ads.sdk.listener.AdOpenListener;
 
 public class AdNetwork {
 

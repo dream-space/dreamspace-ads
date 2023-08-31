@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'dreamspace.ads'
+    namespace 'dreamspace.ads.sdk'
     compileSdk 33
 
     defaultConfig {
@@ -67,7 +67,7 @@ afterEvaluate {
                 from components.release
                 groupId = "dream-space"
                 artifactId = "dreamspace.ads"
-                version = "2.1"
+                version = "2.2"
             }
         }
     }

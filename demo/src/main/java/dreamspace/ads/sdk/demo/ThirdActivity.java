@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import dreamspace.ads.AdNetwork;
+import dreamspace.ads.sdk.AdNetwork;
 
 public class ThirdActivity extends AppCompatActivity {
 

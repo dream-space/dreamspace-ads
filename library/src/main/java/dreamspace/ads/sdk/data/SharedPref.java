@@ -1,9 +1,9 @@
-package dreamspace.ads.data;
+package dreamspace.ads.sdk.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import dreamspace.ads.AdConfig;
+import dreamspace.ads.sdk.AdConfig;
 
 public class SharedPref {
 

@@ -5,10 +5,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import dreamspace.ads.AdConfig;
-import dreamspace.ads.AdNetwork;
-import dreamspace.ads.data.AdNetworkType;
-import dreamspace.ads.listener.AdOpenListener;
+import dreamspace.ads.sdk.AdConfig;
+import dreamspace.ads.sdk.AdNetwork;
+import dreamspace.ads.sdk.data.AdNetworkType;
+import dreamspace.ads.sdk.listener.AdOpenListener;
 
 public class SplashActivity extends AppCompatActivity {
 
