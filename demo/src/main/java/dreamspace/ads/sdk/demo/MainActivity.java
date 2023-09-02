@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import dreamspace.ads.sdk.AdConfig;
 import dreamspace.ads.sdk.AdNetwork;
 import dreamspace.ads.sdk.data.AdNetworkType;
+import dreamspace.ads.sdk.gdpr.UMP;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AdNetwork adNetwork = new AdNetwork(this);
+        new UMP(this).loadShowConsentForm();
         AdConfig.ad_inters_interval = 2;
         AdConfig.retry_from_start_max = 2;
         AdConfig.retry_from_start = true;

@@ -41,6 +41,9 @@ dependencies {
     implementation 'com.google.android.gms:play-services-basement:18.2.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    // ump sdk
+    implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
+
     //Ad Networks
     implementation 'com.google.android.gms:play-services-ads:22.0.0'
     implementation 'com.facebook.android:audience-network-sdk:6.14.0'
@@ -67,7 +70,7 @@ afterEvaluate {
                 from components.release
                 groupId = "dream-space"
                 artifactId = "dreamspace.ads"
-                version = "2.2"
+                version = "2.2.1"
             }
         }
     }
